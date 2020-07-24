@@ -9,12 +9,12 @@ module.exports = function (controller) {
 
     const convo = new BotkitConversation( 'storage_chat', controller );
 
-    convo.say( `If Botkit persistent storage is configured, I can remember your favorite color even if I'm restarted!` );
-    convo.ask( `What is your favorite color (don't forget to @mention me if in a group Space?)`, [], 'statedColor' );
+    convo.say( `If Botkit persistent storage is configured, I can remember your favorite pasta dish even if I'm restarted!` );
+    convo.ask( `What is your favorite pasta dish? (don't forget to @mention me if in a group Space?)`, [], 'statedPasta' );
 
-    convo.say( 'Your favorite color is: {{ vars.statedColor }}' );
+    convo.say( 'Your favorite pasta dish is: {{ vars.statedPasta }}' );
     convo.ask( `You can now stop and restart the bot app...\nWhen the bot app is restarted, enter "ready" to test my powers of recall (don't forget to @mention me if in a group Space!)\n`, [], {} );
-    convo.say( 'Your favorite color is: {{ vars.statedColor }}' );
+    convo.say( 'Your favorite pasta dish is: {{ vars.statedPasta }}' );
 
     controller.addDialog( convo );
 
